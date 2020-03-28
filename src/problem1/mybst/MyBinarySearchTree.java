@@ -29,4 +29,17 @@ public class MyBinarySearchTree {
         preOrder(root.getRight());
         preOrderString.append(root.getKey()).append(" ");
     }
+
+    private void leftNode(TreeNode root) {
+        if (root == null) return;
+        else {
+
+            if (root.getLeft() != null)
+                System.out.println(root.getLeft().getKey());
+            else
+                count++;
+            leftNode(root.getLeft());
+            leftNode(root.getRight());
+        }
+    }
 }
