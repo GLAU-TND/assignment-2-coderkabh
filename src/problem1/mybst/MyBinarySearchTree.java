@@ -19,8 +19,19 @@ public class MyBinarySearchTree {
         this.root = null;
         preOrderString = new StringBuilder();
     }
+
     public void add(final int value) {
         this.root = addService(this.root, value);
+    }
+
+    public void postOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        postOrder(root.getLeft());
+        postOrder(root.getRight());
+        System.out.print(root.getKey() + " ");
     }
 
     public static void preOrder(TreeNode root) {
