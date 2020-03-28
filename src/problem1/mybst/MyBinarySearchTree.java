@@ -41,5 +41,13 @@ public class MyBinarySearchTree {
             leftNode(root.getLeft());
             leftNode(root.getRight());
         }
+
+    }
+    public void printLeftNode() {
+        leftNode(root);
+    }
+
+    public void countNotLeft() {
+        System.out.println(count);
     }
 }
