@@ -34,5 +34,26 @@ public class MyCircularQueue {
         }
     }
 
+    public Student remove() {
+        if (front == null)
+            System.out.println("Queue is empty.");
+        Student student = null;
+        if (front == rear) {
+            student = front.getStudent();
+            front = rear = null;
+        } else {
+            Node temp = front;
+            student = temp.getStudent();
+            front = front.getNext();
+            rear.setNext(front);
+        }
+        if (student.getBackLogCount() == 0)
+            return student;
+        else {
+            insert(student);
+            return null;
+        }
+    }
+
 
 }
