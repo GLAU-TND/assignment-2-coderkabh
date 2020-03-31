@@ -29,4 +29,22 @@ public class MyQueue {
         }
     }
 
-}
+    private Node front;
+    private Node rear;
+
+    public MyQueue() {
+        front = null;
+        rear = null;
+    }
+
+    public void enqueue(int data) {
+        Node ns = new Node();
+        ns.setData(data);
+        if (front == null) {
+            front = rear = ns;
+        } else {
+            rear.setNext(ns);
+            rear = ns;
+        }
+
+    }
