@@ -5,6 +5,7 @@
  *  Time: 7:11 PM
  */
 package problem4.myqueue;
+import problem1.node.TreeNode;
 // to create queue to store pre - order successor
 
 public class MyQueue {
@@ -48,4 +49,15 @@ public class MyQueue {
         }
     }
 
+    public void preSuccessor(TreeNode root) {
+        if (root == null)
+            return;
+        else {
+            enqueue(root.getKey());
+            preSuccessor(root.getLeft());
+            preSuccessor(root.getRight());
+        }
     }
+
+
+}
