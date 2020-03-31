@@ -39,7 +39,6 @@ public class MyMain {
             System.out.println("Student removed and the is name is : " + removeStudent.getName());
         myCircularQueue.display();
 
-
         // Demonstrated to remove 5 elements
 
 
