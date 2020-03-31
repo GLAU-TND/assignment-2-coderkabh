@@ -60,7 +60,7 @@ public class MyQueue {
         }
     }
 
-    public void getPreSuccor() {
+    public void getPreSuccessor() {
         Node tempNode = front.getNext();
         while (tempNode != null) {
             System.out.print(tempNode.getData() + "\t");
