@@ -9,6 +9,11 @@ import problem1.node.TreeNode;
 // to create queue to store pre - order successor
 
 public class MyQueue {
+
+    private Node front;
+    private Node rear;
+
+
     static class Node {
         int data;
         Node next;
@@ -30,8 +35,6 @@ public class MyQueue {
         }
     }
 
-    private Node front;
-    private Node rear;
 
     public MyQueue() {
         front = null;
@@ -50,12 +53,18 @@ public class MyQueue {
     }
 
     public void preSuccessor(TreeNode root) {
-        if (root == null)
-            return;
-        else {
+        if (root != null) {
             enqueue(root.getKey());
             preSuccessor(root.getLeft());
             preSuccessor(root.getRight());
+        }
+    }
+
+    public void getPreSuccor() {
+        Node tempNode = front.getNext();
+        while (tempNode != null) {
+            System.out.print(tempNode.getData() + "\t");
+            tempNode = tempNode.getNext();
         }
     }
 
