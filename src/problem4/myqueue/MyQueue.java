@@ -46,5 +46,6 @@ public class MyQueue {
             rear.setNext(ns);
             rear = ns;
         }
+    }
 
     }
