@@ -55,5 +55,14 @@ public class MyCircularQueue {
         }
     }
 
-
+    public void display() {
+        Node tempNode = front;
+        System.out.println("Student in queue are: ");
+        while (tempNode.getNext() != front) {
+            System.out.println(tempNode.getStudent().getName());
+            tempNode = tempNode.getNext();
+        }
+        System.out.println(tempNode.getStudent().getName());
+        System.out.println();
+    }
 }
